@@ -7,18 +7,18 @@ import { currencyFormatter } from '../../utils/formatting.ts';
 
 export const ShopItem = ({ id, name, price, image }: InstrumentPreview) => {
   return (
-    <li className="overflow-clip border border-secundary/20 rounded">
+    <li className="overflow-clip border border-secundary/10 rounded">
       <Link
         to={`instrumentos-de-cordas/${id}`}
         className="h-full flex flex-col"
       >
-        <div className="flex-1">
+        <div className="">
           <img src={image} alt={name} className="object-cover aspect-square" />
         </div>
         <div className="px-3 py-4 flex flex-col justify-between flex-1">
-          <h3 className="text-secundary text-lg">{name}</h3>
+          <h3 className="text-secundary lg:text-lg">{name}</h3>
           <div className="">
-            <div className="text-amber-700 py-4 text-xl font-semibold">
+            <div className="text-amber-700 py-4 text-xl font-semibold text-balance">
               {currencyFormatter.format(price)}{' '}
               <span className="text-secundary/70 text-sm font-medium">
                 À vista

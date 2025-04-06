@@ -17,7 +17,7 @@ export const Instruments: Instrument[] = [
     stringNum: 6,
     quant: 22,
     image: guitarFenderStratocasterHSS,
-    category: 'guitar',
+    category: 'guitarra',
   },
   {
     id: 'guitarra-prs-se-nf3-maple-metallic-orange',
@@ -26,7 +26,7 @@ export const Instruments: Instrument[] = [
     stringNum: 6,
     quant: 16,
     image: guitarPRSSENF3Maple,
-    category: 'guitar',
+    category: 'guitarra',
   },
   {
     id: 'guitarra-fender-stratocaster-player-ii-aged-cherry-burst',
@@ -35,7 +35,7 @@ export const Instruments: Instrument[] = [
     stringNum: 6,
     quant: 44,
     image: guitarFenderStratocaster,
-    category: 'guitar',
+    category: 'guitarra',
   },
   {
     id: 'guitarra-tagima-jazz-master-tw-60-metallic-deep-silver',
@@ -44,7 +44,7 @@ export const Instruments: Instrument[] = [
     stringNum: 6,
     quant: 24,
     image: guitarTagimaJazzMaster,
-    category: 'guitar',
+    category: 'guitarra',
   },
   {
     id: 'contrabaixo-squier-jazz-bass-v-affinity-5-cordas-sunburst',

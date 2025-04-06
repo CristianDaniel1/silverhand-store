@@ -5,7 +5,7 @@ export type Instrument = {
   stringNum: number;
   quant: number;
   image: string;
-  category: 'guitar' | 'double-bass' | 'acousticGuitar';
+  category: 'guitarra' | 'double-bass' | 'acousticGuitar';
 };
 
 export type InstrumentPreview = {
