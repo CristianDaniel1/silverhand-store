@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router';
 
 import { RootLayout } from './pages/RootLayout.tsx';
-import { Home } from './pages/Home.tsx';
 import { Login } from './pages/Login.tsx';
 import { SignUp } from './pages/SignUp.tsx';
 import { InstrumentShop } from './pages/InstrumentShop.tsx';
@@ -16,7 +15,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <InstrumentShop />,
+      },
+      {
+        path: 'instrumentos-de-cordas/:instrumentId',
+        element: <InstrumentDetails />,
       },
       {
         path: 'login',
@@ -25,14 +28,6 @@ const router = createBrowserRouter([
       {
         path: 'cadastro',
         element: <SignUp />,
-      },
-      {
-        path: 'instrumentos-de-cordas',
-        element: <InstrumentShop />,
-      },
-      {
-        path: 'instrumentos-de-cordas/:instrumentId',
-        element: <InstrumentDetails />,
       },
     ],
   },
