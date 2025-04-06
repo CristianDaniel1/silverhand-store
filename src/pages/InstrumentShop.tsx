@@ -1,5 +1,6 @@
 import heroImg from '../assets/playing-guitar.jpg';
 import samuraiGuitar from '../assets/silverhand-guitar.jpg';
+import { ShopContainer } from '../components/instrumentShop/ShopContainer.tsx';
 
 export const InstrumentShop = () => {
   return (
@@ -35,6 +36,7 @@ export const InstrumentShop = () => {
           </div>
         </div>
       </section>
+      <ShopContainer />
     </div>
   );
 };

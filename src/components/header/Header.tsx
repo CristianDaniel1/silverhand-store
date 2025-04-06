@@ -28,10 +28,13 @@ export const Header = () => {
             />
           </div>
         </Link>
+        <div className="text-white text-2xl font-merry font-light">
+          Let's <span className="text-primary">Rock!</span>
+        </div>
         <div className="ml-auto lg:ml-0 flex items-center justify-center gap-2">
           <button className="flex gap-2 items-center text-primary hover:text-white duration-200 relative">
             <CartIcon />
-            <span className="hidden md:block text-sm uppercase tracking-wider font-semibold">
+            <span className="hidden md:block tracking-wider font-semibold">
               Carrinho
             </span>
           </button>
