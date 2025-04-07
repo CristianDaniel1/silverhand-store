@@ -30,7 +30,7 @@
   }
 
   .underline-visual::before {
-    @apply content-[''] absolute bottom-4 left-0 w-20 h-[4px] bg-primary;
+    @apply content-[''] absolute bottom-4 left-0 w-20 h-[3px] xl:h-[4px] bg-primary;
   }
 }
 

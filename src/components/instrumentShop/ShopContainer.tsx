@@ -1,7 +1,7 @@
 import { ShopList } from './ShopList.tsx';
 import { ShopItem } from './ShopItem.tsx';
 import { Instruments } from '../../data.ts';
-import img from '../../assets/tyler-clemmensen-TW-wknV1oZo-unsplash.jpg';
+import img from '../../assets/cool-guitar.jpg';
 
 export const ShopContainer = () => {
   // const [selectedCategory, setSelectedCategory] = useState();
@@ -11,7 +11,7 @@ export const ShopContainer = () => {
       <div className="flex justify-between items-center flex-wrap gap-6 bg-secundary h-60 relative">
         <img
           src={img}
-          alt=""
+          alt="Silverhand Samurai"
           className="object-cover h-full w-full opacity-40"
         />
         <h2 className="padding-y font-merry font-light text-3xl xl:text-4xl text-center w-full text-white absolute">

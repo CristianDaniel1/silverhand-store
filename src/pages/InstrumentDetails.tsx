@@ -22,6 +22,9 @@ export const InstrumentDetails = () => {
         <section className="padding-y max-container sm:padding-x">
           <article className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
             <div className="w-full h-full aspect-square relative animate-[opacity_0.5s_ease-in-out_backwards] shadow-lg">
+              <button className="absolute top-4 left-4 size-24 border border-secundary/10 overflow-clip rounded-lg">
+                <img src={image} alt={name} className="aspect-square" />
+              </button>
               <img
                 src={image}
                 alt={name}
@@ -44,10 +47,16 @@ export const InstrumentDetails = () => {
                 </h3>
                 <div className="pb-6 grid grid-cols-2 gap-4">
                   <div className="px-4 py-3 border border-secundary/20">
-                    Número de Cordas: {stringNum}
+                    Número de Cordas:{' '}
+                    <span className="text-primary font-medium">
+                      {stringNum}
+                    </span>
                   </div>
                   <div className="px-4 py-3 border border-secundary/20">
-                    Categoria: {category}
+                    Categoria:{' '}
+                    <span className="capitalize text-primary font-medium">
+                      {category}
+                    </span>
                   </div>
                 </div>
               </div>

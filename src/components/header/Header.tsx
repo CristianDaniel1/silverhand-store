@@ -32,7 +32,7 @@ export const Header = () => {
           Let's <span className="text-primary">Rock!</span>
         </div>
         <div className="ml-auto lg:ml-0 flex items-center justify-center gap-2">
-          <button className="flex gap-2 items-center text-primary hover:text-white duration-200 relative">
+          <button className="flex gap-2 items-center text-slate-100 hover:text-primary duration-200 relative">
             <CartIcon />
             <span className="hidden md:block tracking-wider font-semibold">
               Carrinho
@@ -40,7 +40,7 @@ export const Header = () => {
           </button>
           <Link
             to="/login"
-            className="hidden sm:flex sm:gap-2 sm:items-center text-white px-3 py-3"
+            className="flex sm:gap-2 sm:items-center text-slate-100 hover:text-primary duration-200 px-3 py-3"
           >
             <UserIcon />
             Entrar

@@ -13,7 +13,9 @@ export const InstrumentShop = () => {
             <img
               src={heroImg}
               alt="Imagem do inicio"
-              className="object-cover h-full w-full"
+              width={616}
+              height={616}
+              className="object-cover h-full w-full aspect-square"
             />
           </div>
           <section className="padding-y padding-x max-container">
