@@ -38,8 +38,7 @@ export const useCartStore = create<Cart>((set, get) => {
           quantInCart: existingItem.quantInCart + 1,
         };
 
-        existingItem.quant--;
-        console.log(existingItem.quant);
+        existingItem.quant = existingItem.quant - 1;
 
         updatedCartItems[existingItemIndex] = updatedItem;
       } else updatedCartItems.push({ ...instrument, quantInCart: 1 });
@@ -68,8 +67,7 @@ export const useCartStore = create<Cart>((set, get) => {
         updatedCartItems[existingItemIndex] = updatedItem;
       }
 
-      existingItem.quant++;
-      console.log(existingItem.quant);
+      existingItem.quant = existingItem.quant + 1;
 
       set({ cartItems: updatedCartItems });
     },

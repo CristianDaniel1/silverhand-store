@@ -6,8 +6,11 @@ import logo from '../../assets/logo.png';
 import { CloseIcon } from '../icons/CloseIcon.tsx';
 import { HamburgerIcon } from '../icons/HamburgerIcon.tsx';
 import { CartButton } from '../cart/CartButton.tsx';
+import { useCartStore } from '../../store/cartStore.ts';
 
 export const Header = () => {
+  const isOpen = useCartStore(state => state.isOpen);
+
   const [isVisible, setIsVisible] = useState(false);
 
   function handleToggleBar() {
@@ -48,11 +51,13 @@ export const Header = () => {
           {isVisible ? <CloseIcon /> : <HamburgerIcon />}
         </button>
       </div>
-      <Navigation
-        isVisible={isVisible}
-        onCloseBar={setIsVisible}
-        onToggleBar={handleToggleBar}
-      />
+      {!isOpen && (
+        <Navigation
+          isVisible={isVisible}
+          onCloseBar={setIsVisible}
+          onToggleBar={handleToggleBar}
+        />
+      )}
     </header>
   );
 };

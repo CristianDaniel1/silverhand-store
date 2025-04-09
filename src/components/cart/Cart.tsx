@@ -31,7 +31,7 @@ export const Cart = () => {
       <div
         className={`${
           !isOpen ? 'hidden hide-cart' : 'open-cart'
-        } h-screen cart fixed right-0 top-0 bg-[#0e0e0e] w-full md:w-[32rem] z-40 overflow-hidden px-4 md:px-5 lg:px-10`}
+        } h-screen cart fixed right-0 top-0 bg-white w-full md:w-[34rem] z-40 overflow-hidden px-4 md:px-5 lg:px-10`}
       >
         {cartItems.length > 0 ? (
           <>
@@ -45,12 +45,8 @@ export const Cart = () => {
             </Button>
           </>
         ) : (
-          <div className="flex flex-col padding-y padding-x text-center">
-            <p className="uppercase pt-10 text-sm tracking-wider text-primary font-semibold">
-              Está faltando algo...
-            </p>
+          <div className="flex flex-col padding-y padding-x text-center text-secundary">
             <h3 className="font-merry text-2xl py-6">O carrinho está vazio!</h3>
-            <p className="pb-6">Explore o cardápio e escolha</p>
           </div>
         )}
       </div>

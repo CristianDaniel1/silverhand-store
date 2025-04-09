@@ -13,14 +13,22 @@ export const Quantity = ({
   onDecrease,
 }: QuantityProps) => {
   return (
-    <div className="flex gap-6 items-center px-6 py-6 text-primary">
-      <button onClick={onDecrease} className="hover:text-white duration-200">
-        <MinusIcon />
-      </button>
-      <div className="text-lg font-medium">{currentQuant}</div>
-      <button onClick={onIncrease} className="hover:text-white duration-200">
-        <PlusIcon />
-      </button>
+    <div className="flex justify-start items-center">
+      <div className="flex gap-6 items-center justify-center p-3 text-primary border border-secundary/20 rounded-md">
+        <button
+          onClick={onDecrease}
+          className="hover:text-secundary duration-200"
+        >
+          <MinusIcon />
+        </button>
+        <div className="text-lg font-medium">{currentQuant}</div>
+        <button
+          onClick={onIncrease}
+          className="hover:text-secundary duration-200"
+        >
+          <PlusIcon />
+        </button>
+      </div>
     </div>
   );
 };

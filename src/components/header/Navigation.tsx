@@ -21,7 +21,7 @@ export const Navigation = ({
         <div
           className={`${
             !isVisible ? 'hidden hide-backdrop' : 'lg:hidden open-backdrop'
-          } absolute z-30 bg-black/60 left-0 w-full min-h-screen pb-4 top-0 `}
+          } absolute z-30 bg-black/60 left-0 w-full min-h-screen pb-4 top-0`}
           onClick={onToggleBar}
         ></div>
       )}

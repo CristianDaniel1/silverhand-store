@@ -2,9 +2,11 @@ import { useParams } from 'react-router';
 import { currencyFormatter } from '../utils/formatting.ts';
 import { Instruments } from '../data.ts';
 import { BasicHeader } from '../components/header/BasicHeader.tsx';
-import { Button } from '../components/ui/Button.tsx';
+import { AddToCart } from '../components/AddToCart.tsx';
+import { useCartStore } from '../store/cartStore.ts';
 
 export const InstrumentDetails = () => {
+  const addToCart = useCartStore(state => state.addToCart);
   const params = useParams();
 
   const instrument = Instruments.find(
@@ -13,7 +15,11 @@ export const InstrumentDetails = () => {
 
   if (!instrument) return <p>Ops, ocorreu um erro!</p>;
 
-  const { image, name, price, stringNum, category } = instrument;
+  const { id, image, name, price, stringNum, category, quant } = instrument;
+
+  function handleAddToCart() {
+    addToCart({ id, image, name, price, stringNum, category, quant });
+  }
 
   return (
     <>
@@ -67,9 +73,7 @@ export const InstrumentDetails = () => {
                     Pix, Cartão de Débito ou Crédito!
                   </span>
                 </p>
-                <Button bgColor className="w-full">
-                  Adicionar no carrinho
-                </Button>
+                <AddToCart onAddToCart={handleAddToCart} className="w-full" />
               </div>
             </div>
           </article>
