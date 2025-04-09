@@ -1,8 +1,8 @@
 import { create } from 'zustand';
-import { type cartItems, Instrument } from '../types';
+import { type CartItems, Instrument } from '../types';
 
 interface Cart {
-  cartItems: cartItems[];
+  cartItems: CartItems[];
   isOpen: boolean;
 
   toggleShowCart: () => void;

@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
 import { Navigation } from './Navigation.tsx';
-import { CartIcon } from '../icons/CartIcon.tsx';
 import { UserIcon } from '../icons/UserIcon.tsx';
 import logo from '../../assets/logo.png';
 import { CloseIcon } from '../icons/CloseIcon.tsx';
 import { HamburgerIcon } from '../icons/HamburgerIcon.tsx';
+import { CartButton } from '../cart/CartButton.tsx';
 
 export const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,12 +32,7 @@ export const Header = () => {
           Let's <span className="text-primary">Rock!</span>
         </div>
         <div className="ml-auto lg:ml-0 flex items-center justify-center gap-2">
-          <button className="flex gap-2 items-center text-slate-100 hover:text-primary duration-200 relative">
-            <CartIcon />
-            <span className="hidden md:block tracking-wider font-semibold">
-              Carrinho
-            </span>
-          </button>
+          <CartButton isVisible={isVisible} onCloseBar={handleToggleBar} />
           <Link
             to="/login"
             className="flex sm:gap-2 sm:items-center text-slate-100 hover:text-primary duration-200 px-3 py-3"

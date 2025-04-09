@@ -34,6 +34,25 @@
   }
 }
 
+.cart {
+  transition-duration: 0.5s;
+  transition-behavior: allow-discrete;
+}
+
+.open-cart {
+  display: block;
+  transform: translateX(0);
+
+  @starting-style {
+    transform: translateX(100%);
+  }
+}
+
+.hide-cart {
+  display: none;
+  transform: translateX(100%);
+}
+
 .hide-backdrop {
   display: none;
   opacity: 0;

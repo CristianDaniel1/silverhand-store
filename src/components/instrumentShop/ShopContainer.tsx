@@ -22,6 +22,7 @@ export const ShopContainer = () => {
         <ShopList>
           {Instruments.map(instrument => (
             <ShopItem
+              key={instrument.id}
               id={instrument.id}
               price={instrument.price}
               name={instrument.name}

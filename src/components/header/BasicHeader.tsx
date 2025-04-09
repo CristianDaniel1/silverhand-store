@@ -1,9 +1,16 @@
 import { Link } from 'react-router';
-import { CartIcon } from '../icons/CartIcon.tsx';
 import { UserIcon } from '../icons/UserIcon.tsx';
 import logo from '../../assets/logo.png';
+import { CartButton } from '../cart/CartButton.tsx';
+import { useState } from 'react';
 
 export const BasicHeader = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  function handleToggleBar() {
+    setIsVisible(prevIsVisible => !prevIsVisible);
+  }
+
   return (
     <header className="overflow-x-clip fixed w-full z-50 bg-secundary">
       <div className="flex justify-between gap-4 relative font-semibold tracking-wide items-center h-[65px] lg:h-24 mx-auto my-0 px-4 md:px-5 lg:px-10 max-container">
@@ -22,12 +29,8 @@ export const BasicHeader = () => {
           Let's <span className="text-primary">Rock!</span>
         </div>
         <div className="ml-auto lg:ml-0 flex items-center justify-center gap-2">
-          <button className="flex gap-2 items-center text-slate-100 hover:text-primary duration-200 relative">
-            <CartIcon />
-            <span className="hidden md:block tracking-wider font-semibold">
-              Carrinho
-            </span>
-          </button>
+          <CartButton isVisible={isVisible} onCloseBar={handleToggleBar} />
+
           <Link
             to="/login"
             className="flex sm:gap-2 sm:items-center text-slate-100 hover:text-primary duration-200 px-3 py-3"

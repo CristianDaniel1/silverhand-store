@@ -15,6 +15,6 @@ export type InstrumentPreview = {
   image: string;
 };
 
-export type cartItems = {
+export type CartItems = {
   quantInCart: number;
 } & Instrument;
