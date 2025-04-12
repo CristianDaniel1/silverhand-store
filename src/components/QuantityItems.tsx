@@ -14,14 +14,14 @@ export const Quantity = ({
 }: QuantityProps) => {
   return (
     <div className="flex justify-start items-center">
-      <div className="flex gap-6 items-center justify-center p-3 text-primary border border-secundary/20 rounded-md">
+      <div className="grid grid-cols-3 gap-3 sm:gap-5 items-center p-2 sm:p-3 text-primary border border-secundary/20 rounded-md">
         <button
           onClick={onDecrease}
           className="hover:text-secundary duration-200"
         >
           <MinusIcon />
         </button>
-        <div className="text-lg font-medium">{currentQuant}</div>
+        <div className="sm:text-lg font-medium text-center">{currentQuant}</div>
         <button
           onClick={onIncrease}
           className="hover:text-secundary duration-200"

@@ -1,16 +1,17 @@
 import { useParams } from 'react-router';
 import { currencyFormatter } from '../utils/formatting.ts';
-import { Instruments } from '../data.ts';
+import { instruments } from '../data.ts';
 import { BasicHeader } from '../components/header/BasicHeader.tsx';
 import { AddToCart } from '../components/AddToCart.tsx';
 import { useCartStore } from '../store/cartStore.ts';
-import { DetailsImage } from '../components/DetailsImage.tsx';
+import { DetailsImage } from '../components/instrumentDetails/DetailsImage.tsx';
+import { RelatedInstruments } from '../components/instrumentDetails/RelatedInstruments.tsx';
 
 export const InstrumentDetails = () => {
   const addToCart = useCartStore(state => state.addToCart);
   const params = useParams();
 
-  const instrument = Instruments.find(
+  const instrument = instruments.find(
     instrument => instrument.id === params.instrumentId
   );
 
@@ -28,7 +29,7 @@ export const InstrumentDetails = () => {
       <main className="relative overflow-x-clip">
         <section className="padding-y max-container sm:padding-x">
           <article className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
-            <DetailsImage image={image} name={name} />
+            <DetailsImage key={instrument.id} image={image} name={name} />
             <div className="padding-x md:pl-0 md:pr-12 lg:pr-20 py-6 md:py-8 lg:py-14">
               <div className="flex justify-between items-center pb-8 gap-4 flex-wrap">
                 <h2 className="text-3xl">{name}</h2>
@@ -70,6 +71,11 @@ export const InstrumentDetails = () => {
             </div>
           </article>
         </section>
+        <RelatedInstruments
+          instruments={instruments}
+          currentCategory={category}
+          currentId={id}
+        />
       </main>
     </>
   );

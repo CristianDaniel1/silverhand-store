@@ -1,6 +1,6 @@
 import { ShopList } from './ShopList.tsx';
 import { ShopItem } from './ShopItem.tsx';
-import { Instruments } from '../../data.ts';
+import { instruments } from '../../data.ts';
 import img from '../../assets/cool-guitar.jpg';
 
 export const ShopContainer = () => {
@@ -20,7 +20,7 @@ export const ShopContainer = () => {
       </div>
       <section className="max-container padding-y padding-x">
         <ShopList>
-          {Instruments.map(instrument => (
+          {instruments.map(instrument => (
             <ShopItem
               key={instrument.id}
               id={instrument.id}

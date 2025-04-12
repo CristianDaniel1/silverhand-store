@@ -31,7 +31,7 @@ export const Header = () => {
             />
           </div>
         </Link>
-        <div className="text-white text-2xl font-merry font-light">
+        <div className="hidden sm:block text-white text-2xl font-merry font-light">
           Let's <span className="text-primary">Rock!</span>
         </div>
         <div className="ml-auto lg:ml-0 flex items-center justify-center gap-2">
@@ -41,7 +41,7 @@ export const Header = () => {
             className="flex sm:gap-2 sm:items-center text-slate-100 hover:text-primary duration-200 px-3 py-3"
           >
             <UserIcon />
-            Entrar
+            <span className="hidden sm:inline-block">Entrar</span>
           </Link>
         </div>
         <button

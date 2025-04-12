@@ -9,7 +9,7 @@ import doubleBassSquierJazzBassVAffinity from './assets/double-bass/contrabaixo-
 
 import acousticGuitarGEWAClassicNylonStudent from './assets/acousticGuitars/violão-GEWA-Clássico-Acústico-Nylon-Student.jpg';
 
-export const Instruments: Instrument[] = [
+export const instruments: Instrument[] = [
   {
     id: 'guitarra-fender-stratocaster-player-ii-hss-transparent-cherry-Burst',
     name: 'Guitarra Fender Stratocaster Player II HSS - Transparent Cherry Burst',

@@ -9,6 +9,7 @@ interface Cart {
   hideCart: () => void;
   addToCart: (instrument: Instrument) => void;
   removeItem: (id: string) => void;
+  clearCart: () => void;
 }
 
 export const useCartStore = create<Cart>((set, get) => {
@@ -70,6 +71,10 @@ export const useCartStore = create<Cart>((set, get) => {
       existingItem.quant = existingItem.quant + 1;
 
       set({ cartItems: updatedCartItems });
+    },
+
+    clearCart: () => {
+      set({ cartItems: [] });
     },
   };
 });

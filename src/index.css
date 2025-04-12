@@ -64,6 +64,14 @@
   .btn-animation:hover {
     @apply bg-primary text-secundary;
   }
+
+  .custom-scroll::-webkit-scrollbar {
+    @apply w-[0.4rem] bg-neutral-200;
+  }
+
+  .custom-scroll::-webkit-scrollbar-thumb {
+    @apply rounded-[2rem] bg-secundary/40;
+  }
 }
 
 .cart {
@@ -97,6 +105,10 @@
   @starting-style {
     opacity: 0;
   }
+}
+
+.cart-h-calc {
+  height: calc(100% - 14rem);
 }
 
 ::-webkit-scrollbar {

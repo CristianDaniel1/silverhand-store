@@ -16,7 +16,7 @@ export const ShopItem = ({ id, name, price, image, ...props }: Instrument) => {
   return (
     <li className="overflow-clip border border-secundary/10 rounded relative pb-12">
       <Link
-        to={`instrumentos-de-cordas/${id}`}
+        to={`/instrumentos-de-cordas/${id}`}
         className="h-full flex flex-col instrument"
       >
         <div className="overflow-clip">
@@ -31,7 +31,7 @@ export const ShopItem = ({ id, name, price, image, ...props }: Instrument) => {
           <div className="">
             <div className="text-amber-700 py-4 text-xl font-semibold text-balance">
               {currencyFormatter.format(price)}{' '}
-              <span className="text-secundary/70 text-sm font-medium">
+              <span className="hidden xs:inline-block text-secundary/70 text-sm font-medium">
                 À vista
               </span>
             </div>
@@ -42,7 +42,7 @@ export const ShopItem = ({ id, name, price, image, ...props }: Instrument) => {
         className="absolute left-3 right-3 bottom-4 flex items-center justify-center gap-2"
         onClick={handleAddToCart}
       >
-        <div>
+        <div className="hidden xs:inline-block">
           <CartIcon />
         </div>
         Adicionar
