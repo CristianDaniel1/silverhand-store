@@ -23,7 +23,7 @@ export const CartButton = ({ isVisible, onCloseBar }: CartButtonProps) => {
 
   return (
     <button
-      className="flex gap-2 items-center text-white hover:text-primary duration-200 relative"
+      className="flex gap-2 items-center text-slate-100 hover:text-primary duration-200 relative"
       onClick={handleToggleCart}
     >
       <CartIcon />

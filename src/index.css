@@ -30,6 +30,22 @@
   .instrument:hover .img-instrument {
     @apply scale-125 -translate-y-12 opacity-75;
   }
+
+  .instrument-btn-2 {
+    @apply scale-150 -translate-y-4 translate-x-4 rotate-45;
+  }
+
+  .instrument-2 {
+    @apply scale-125 -translate-y-4 translate-x-4 rotate-45;
+  }
+
+  .instrument-btn-3 {
+    @apply scale-[3] translate-y-[5rem] -translate-x-5 rotate-12;
+  }
+
+  .instrument-3 {
+    @apply scale-[2] translate-y-[20rem] -translate-x-12 rotate-12;
+  }
 }
 
 @layer utilities {

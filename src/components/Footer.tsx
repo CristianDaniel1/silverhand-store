@@ -14,7 +14,8 @@ export const Footer = () => {
           />
         </div>
         <p className="text-center pt-6">
-          &copy; 2024 Silverhand. Desenvolvido por Cristian Daniel
+          &copy; 2024 SilverHand. Desenvolvido por{' '}
+          <span className="font-medium">Cristian Daniel</span>
         </p>
       </div>
     </footer>

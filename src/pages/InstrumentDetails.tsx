@@ -4,6 +4,7 @@ import { Instruments } from '../data.ts';
 import { BasicHeader } from '../components/header/BasicHeader.tsx';
 import { AddToCart } from '../components/AddToCart.tsx';
 import { useCartStore } from '../store/cartStore.ts';
+import { DetailsImage } from '../components/DetailsImage.tsx';
 
 export const InstrumentDetails = () => {
   const addToCart = useCartStore(state => state.addToCart);
@@ -27,16 +28,7 @@ export const InstrumentDetails = () => {
       <main className="relative overflow-x-clip">
         <section className="padding-y max-container sm:padding-x">
           <article className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
-            <div className="w-full h-full aspect-square relative animate-[opacity_0.5s_ease-in-out_backwards] shadow-lg">
-              <button className="absolute top-4 left-4 size-24 border border-secundary/10 overflow-clip rounded-lg">
-                <img src={image} alt={name} className="aspect-square" />
-              </button>
-              <img
-                src={image}
-                alt={name}
-                className="object-cover w-full h-full aspect-square"
-              />
-            </div>
+            <DetailsImage image={image} name={name} />
             <div className="padding-x md:pl-0 md:pr-12 lg:pr-20 py-6 md:py-8 lg:py-14">
               <div className="flex justify-between items-center pb-8 gap-4 flex-wrap">
                 <h2 className="text-3xl">{name}</h2>

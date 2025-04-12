@@ -8,6 +8,9 @@ export default {
         secundary: '#010012',
         tertiary: '#2bbde7',
       },
+      screens: {
+        xs: '480px',
+      },
       fontFamily: {
         merry: ['Merriweather', 'serif'],
       },

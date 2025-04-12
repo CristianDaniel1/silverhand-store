@@ -26,7 +26,7 @@ export const Navigation = ({
         ></div>
       )}
       <ul
-        className={`absolute px-4 pt-40 pb-10 lg:py-4 top-0 right-0 flex flex-col lg:justify-center items-center gap-6 lg:gap-8 duration-500 transition-all lg:transition-none h-screen w-60 sm:w-80 lg:w-screen bg-[#131313] lg:translate-x-0 lg:static lg:h-auto lg:flex-row z-40 ${
+        className={`absolute px-4 pt-40 pb-10 lg:py-4 top-0 right-0 flex flex-col lg:justify-center items-center gap-6 lg:gap-8 duration-500 transition-all lg:transition-none h-screen w-60 sm:w-80 lg:w-screen bg-[#161616] lg:translate-x-0 lg:static lg:h-auto lg:flex-row z-40 ${
           isVisible ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

@@ -15,11 +15,11 @@ export const Login = () => {
             <img
               src={loginImg}
               alt="taças de vinho em cima de uma mesa"
-              className="object-cover w-full h-full brightness-75 aspect-video"
+              className="object-cover w-full h-full brightness-75 aspect-video animate-opacity"
             />
           </div>
           <div className="max-container md:padding-x flex items-center py-6">
-            <form className=" px-8 md:px-14 py-16 xl:w-[40rem] mx-auto rounded-md animate-[slide-up_0.5s_ease-in-out_backwards]">
+            <form className=" px-8 md:px-14 py-8 lg:py-16 xl:w-[40rem] mx-auto rounded-md animate-[slide-up_0.5s_ease-in-out_backwards]">
               <h2 className="text-4xl pb-6 font-merry text-center">
                 Bem-vindo(a) de volta!
               </h2>
@@ -44,7 +44,7 @@ export const Login = () => {
               </Button>
               <p className="text-center mt-6">
                 Ainda não tem uma conta?{' '}
-                <Link to="/" className="text-primary font-semibold">
+                <Link to="/cadastro" className="text-primary font-semibold">
                   Cadastre-se
                 </Link>
               </p>
