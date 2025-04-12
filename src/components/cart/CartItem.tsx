@@ -22,12 +22,13 @@ export const CartItem = ({
   ...props
 }: CartItems) => {
   const addToCart = useCartStore(state => state.addToCart);
-
   const removeItem = useCartStore(state => state.removeItem);
 
   function handleDecrease() {
     removeItem(id);
   }
+
+  console.log('teste');
 
   function handleIncrease() {
     addToCart({ id, image, name, price, ...props });
@@ -49,7 +50,7 @@ export const CartItem = ({
         {name}
       </h3>
       <div className="text-primary-light font-semibold pt-6 pr-3 sm:pr-6 ml-auto text-sm sm:text-base">
-        {currencyFormatter.format(price)}
+        {currencyFormatter.format(price * quantInCart)}
       </div>
       <Quantity
         currentQuant={quantInCart}

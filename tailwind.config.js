@@ -39,8 +39,9 @@ export default {
           '100%': { opacity: 1 },
         },
         'opacity-pulse': {
-          '0%, 100%': { opacity: '0.7' },
-          '50%': { opacity: '1' },
+          '0%': { opacity: '1' },
+          '50%': { opacity: '0.5' },
+          '100%': { opacity: '0.75' },
         },
         'appear-transform': {
           '0%': { width: '100%' },
@@ -56,7 +57,7 @@ export default {
         'slide-right': 'slide-right 0.5s ease-in-out forwards',
         'appear-transform': 'appear-transform 0.5s ease-in-out both',
         opacity: 'opacity 0.3s ease-in-out backwards',
-        'opacity-pulse': 'opacity-pulse 3s ease-in-out backwards infinite',
+        'opacity-pulse': 'opacity-pulse 0.4s ease-in-out backwards',
       },
     },
     plugins: [],

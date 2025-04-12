@@ -27,6 +27,9 @@ export const ShopContainer = () => {
               price={instrument.price}
               name={instrument.name}
               image={instrument.image}
+              stringNum={instrument.stringNum}
+              category={instrument.category}
+              quant={instrument.quant}
             />
           ))}
         </ShopList>

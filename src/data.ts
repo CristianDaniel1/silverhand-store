@@ -53,7 +53,7 @@ export const Instruments: Instrument[] = [
     stringNum: 5,
     quant: 27,
     image: doubleBassSquierJazzBassVAffinity,
-    category: 'double-bass',
+    category: 'contrabaixo',
   },
   {
     id: 'violao-gewa-classico-acustico-nylon-student-vg500-140',
@@ -62,6 +62,6 @@ export const Instruments: Instrument[] = [
     stringNum: 6,
     quant: 50,
     image: acousticGuitarGEWAClassicNylonStudent,
-    category: 'acousticGuitar',
+    category: 'violão',
   },
 ];

@@ -1,19 +1,30 @@
 import { Link } from 'react-router';
-import { type InstrumentPreview } from '../../types';
+import { type Instrument } from '../../types';
 
 import { CartIcon } from '../icons/CartIcon.tsx';
 import { Button } from '../ui/Button.tsx';
 import { currencyFormatter } from '../../utils/formatting.ts';
+import { useCartStore } from '../../store/cartStore.ts';
 
-export const ShopItem = ({ id, name, price, image }: InstrumentPreview) => {
+export const ShopItem = ({ id, name, price, image, ...props }: Instrument) => {
+  const addToCart = useCartStore(state => state.addToCart);
+
+  function handleAddToCart() {
+    addToCart({ id, image, name, price, ...props });
+  }
+
   return (
-    <li className="overflow-clip border border-secundary/10 rounded">
+    <li className="overflow-clip border border-secundary/10 rounded relative pb-12">
       <Link
         to={`instrumentos-de-cordas/${id}`}
-        className="h-full flex flex-col"
+        className="h-full flex flex-col instrument"
       >
-        <div className="">
-          <img src={image} alt={name} className="object-cover aspect-square" />
+        <div className="overflow-clip">
+          <img
+            src={image}
+            alt={name}
+            className="object-cover aspect-square img-instrument "
+          />
         </div>
         <div className="px-3 py-4 flex flex-col justify-between flex-1">
           <h3 className="text-secundary lg:text-lg">{name}</h3>
@@ -24,15 +35,18 @@ export const ShopItem = ({ id, name, price, image }: InstrumentPreview) => {
                 À vista
               </span>
             </div>
-            <Button className="w-full flex items-center justify-center gap-2">
-              <div>
-                <CartIcon />
-              </div>
-              Adicionar
-            </Button>
           </div>
         </div>
       </Link>
+      <Button
+        className="absolute left-3 right-3 bottom-4 flex items-center justify-center gap-2"
+        onClick={handleAddToCart}
+      >
+        <div>
+          <CartIcon />
+        </div>
+        Adicionar
+      </Button>
     </li>
   );
 };

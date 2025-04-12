@@ -18,6 +18,18 @@
   .max-container {
     @apply max-w-7xl mx-auto my-0;
   }
+
+  .img-instrument {
+    @apply duration-300;
+  }
+
+  .instrument {
+    @apply duration-300;
+  }
+
+  .instrument:hover .img-instrument {
+    @apply scale-125 -translate-y-12 opacity-75;
+  }
 }
 
 @layer utilities {
@@ -31,6 +43,10 @@
 
   .underline-visual::before {
     @apply content-[''] absolute bottom-4 left-0 w-20 h-[3px] xl:h-[4px] bg-primary;
+  }
+
+  .btn-animation:hover {
+    @apply bg-primary text-secundary;
   }
 }
 

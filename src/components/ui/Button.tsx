@@ -14,11 +14,11 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={`px-6 text-center border-2 py-3 ${
+      className={`px-6 text-center border-2 py-3 rounded ${
         bgColor
-          ? 'bg-primary border-transparent text-secundary'
-          : 'text-primary border-primary'
-      } font-bold tracking-wider z-[1] ${className}`}
+          ? 'bg-primary border-transparent text-secundary hover:bg-white hover:text-primary hover:border-primary'
+          : 'text-primary border-primary hover:bg-primary hover:text-secundary hover:border-transparent'
+      } font-bold tracking-wider duration-200 z-[1] ${className}`}
       {...props}
     >
       {children}
