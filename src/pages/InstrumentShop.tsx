@@ -1,6 +1,6 @@
-import heroImg from '../assets/playing-guitar.jpg';
 import samuraiGuitar from '../assets/silverhand-guitar.jpg';
 import { Header } from '../components/header/Header.tsx';
+import { ImageSlider } from '../components/ImageSlider.tsx';
 import { ShopContainer } from '../components/instrumentShop/ShopContainer.tsx';
 
 export const InstrumentShop = () => {
@@ -9,15 +9,7 @@ export const InstrumentShop = () => {
       <Header />
       <main className="relative overflow-x-clip">
         <div className="min-h-screen">
-          <div className="h-[85vh] w-full">
-            <img
-              src={heroImg}
-              alt="Imagem do inicio"
-              width={616}
-              height={616}
-              className="object-cover h-full w-full aspect-square"
-            />
-          </div>
+          <ImageSlider />
           <section className="padding-y padding-x max-container">
             <div className="grid grid-cols-2">
               <div className="py-4 pr-6">

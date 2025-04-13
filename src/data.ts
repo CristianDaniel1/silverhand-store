@@ -9,6 +9,11 @@ import doubleBassSquierJazzBassVAffinity from './assets/double-bass/contrabaixo-
 
 import acousticGuitarGEWAClassicNylonStudent from './assets/acousticGuitars/violão-GEWA-Clássico-Acústico-Nylon-Student.jpg';
 
+import img1 from './assets/playing-guitar.webp';
+import img2 from './assets/playing-guitar-2.webp';
+import img3 from './assets/guitar-img-1.webp';
+import img4 from './assets/guitar-img-2.webp';
+
 export const instruments: Instrument[] = [
   {
     id: 'guitarra-fender-stratocaster-player-ii-hss-transparent-cherry-Burst',
@@ -63,5 +68,28 @@ export const instruments: Instrument[] = [
     quant: 50,
     image: acousticGuitarGEWAClassicNylonStudent,
     category: 'violão',
+  },
+];
+
+export const images = [
+  {
+    id: 1,
+    img: img1,
+    alt: 'Primeira imagem do slide',
+  },
+  {
+    id: 2,
+    img: img2,
+    alt: 'Segunda imagem do slide',
+  },
+  {
+    id: 3,
+    img: img3,
+    alt: 'Terceira imagem do slide',
+  },
+  {
+    id: 4,
+    img: img4,
+    alt: 'Quarta imagem do slide',
   },
 ];
