@@ -34,6 +34,7 @@ export const SignUp = () => {
                 <Input
                   id="email"
                   label="Email *"
+                  autoComplete="email"
                   type="email"
                   placeholder="Digite o seu e-mail"
                 />
@@ -57,11 +58,12 @@ export const SignUp = () => {
                 <Input
                   id="password"
                   label="Senha *"
+                  autoComplete="new-password"
                   placeholder="Digite uima senha segura"
                   type="password"
                 />
                 <Input
-                  id="cpf"
+                  id="cep"
                   label="CEP para entrega *"
                   type="text"
                   placeholder="Informe o CEP"

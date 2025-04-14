@@ -19,11 +19,11 @@ export const ShopItem = ({ id, name, price, image, ...props }: Instrument) => {
         to={`/instrumentos-de-cordas/${id}`}
         className="h-full flex flex-col instrument"
       >
-        <div className="overflow-clip">
+        <div className="overflow-clip aspect-square">
           <img
             src={image}
             alt={name}
-            className="object-cover aspect-square img-instrument "
+            className="object-cover aspect-square img-instrument"
           />
         </div>
         <div className="px-3 py-4 flex flex-col justify-between flex-1">

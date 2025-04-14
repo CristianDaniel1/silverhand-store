@@ -31,12 +31,14 @@ export const Login = () => {
                 id="email"
                 label="Seu email"
                 type="email"
+                autoComplete="username"
                 placeholder="Digite o seu e-mail"
               />
               <Input
                 id="password"
                 label="Sua senha"
                 placeholder="Digite a sua senha"
+                autoComplete="current-password"
                 type="password"
               />
               <Button className="text-lg my-6 w-full" bgColor>

@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router';
+import { useFilterStore } from '../../store/filterStore';
 
 interface NavigationProps {
   isVisible: boolean;
@@ -11,7 +11,10 @@ export const Navigation = ({
   onCloseBar,
   onToggleBar,
 }: NavigationProps) => {
-  function handleCloseBar() {
+  const setCategory = useFilterStore(state => state.setCategory);
+
+  function handleCloseBar(categ: string) {
+    setCategory(categ);
     if (isVisible) onCloseBar(false);
   }
 
@@ -31,43 +34,32 @@ export const Navigation = ({
         }`}
       >
         <li>
-          <NavLink
-            to="/"
-            onClick={handleCloseBar}
-            className={({ isActive }) =>
-              `hover:text-primary duration-200 ${
-                isActive ? 'text-primary' : ''
-              }`
-            }
+          <a
+            href="#shop"
+            onClick={() => handleCloseBar('guitarra')}
+            className="hover:text-primary duration-200"
           >
             Guitarras
-          </NavLink>
+          </a>
         </li>
+
         <li>
-          <NavLink
-            to="/$"
-            onClick={handleCloseBar}
-            className={({ isActive }) =>
-              `hover:text-primary duration-200 ${
-                isActive ? 'text-primary' : ''
-              }`
-            }
+          <a
+            href="#shop"
+            onClick={() => handleCloseBar('violão')}
+            className="hover:text-primary duration-200"
           >
             Violões
-          </NavLink>
+          </a>
         </li>
         <li>
-          <NavLink
-            to="/$"
-            onClick={handleCloseBar}
-            className={({ isActive }) =>
-              `hover:text-primary duration-200 ${
-                isActive ? 'text-primary' : ''
-              }`
-            }
+          <a
+            href="#shop"
+            onClick={() => handleCloseBar('contrabaixo')}
+            className="hover:text-primary duration-200"
           >
             Contrabaixos
-          </NavLink>
+          </a>
         </li>
       </ul>
     </nav>

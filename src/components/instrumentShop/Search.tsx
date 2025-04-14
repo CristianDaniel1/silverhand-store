@@ -21,19 +21,32 @@ export const Search = ({ setSearchTerm }: SearchProps) => {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    setSearchTerm(undefined);
+    const formData = new FormData(event.currentTarget);
+    const search = formData.get('search') as string;
+
+    if (!search) setSearchTerm(undefined);
+
+    if (lastChange.current && search) {
+      setSearchTerm(search);
+      clearTimeout(lastChange.current);
+    }
     event.currentTarget.reset();
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full" ref={resetForm}>
-      <div className="py-8">
-        <label className="pb-3 inline-block">Busque seu instrumento</label>
+    <form
+      onSubmit={handleSubmit}
+      className="w-full md:w-[24rem]"
+      ref={resetForm}
+    >
+      <div className="">
+        <label className="pb-3 inline-block">Busque o seu instrumento</label>
         <div className="flex">
           <input
             type="search"
+            name="search"
             placeholder="Pesquisar"
-            className="w-full sm:w-[20rem] block bg-transparent px-4 py-2 outline outline-slate-100 focus-within:outline focus-within:outline-gray-200"
+            className="w-full block bg-transparent px-4 py-2 border border-secundary/20 focus-within:outline focus-within:outline-gray-200"
             onChange={handleChange}
           />
           <button className="border duration-200 px-4 py-2 text-primary border-primary hover:bg-primary hover:text-secundary hover:border-transparent active:text-primary active:bg-white active:border-primary">

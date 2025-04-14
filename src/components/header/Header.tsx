@@ -41,15 +41,15 @@ export const Header = () => {
             className="flex sm:gap-2 sm:items-center text-slate-100 hover:text-primary duration-200 px-3 py-3"
           >
             <UserIcon />
-            <span className="hidden sm:inline-block">Entrar</span>
+            <span className="hidden md:inline-block">Entrar</span>
           </Link>
+          <button
+            onClick={handleToggleBar}
+            className="z-50 flex items-center lg:hidden text-slate-100 duration-200 hover:text-primary"
+          >
+            {isVisible ? <CloseIcon /> : <HamburgerIcon />}
+          </button>
         </div>
-        <button
-          onClick={handleToggleBar}
-          className="z-50 lg:hidden text-primary"
-        >
-          {isVisible ? <CloseIcon /> : <HamburgerIcon />}
-        </button>
       </div>
       {!isOpen && (
         <Navigation

@@ -4,22 +4,38 @@ import { instruments } from '../../data.ts';
 import img from '../../assets/cool-guitar.jpg';
 import { Search } from './Search.tsx';
 import { useState } from 'react';
+import { Filter } from './Filter.tsx';
+import { useFilterStore } from '../../store/filterStore.ts';
 
 let filteredinstruments = [...instruments];
 
 export const ShopContainer = () => {
   const [searchTerm, setSearchTerm] = useState<string | undefined>();
-  // const [selectedCategory, setSelectedCategory] = useState();
+  const category = useFilterStore(state => state.category);
+  const selectedStringNum = useFilterStore(state => state.selectedStringNum);
+
+  filteredinstruments = instruments;
 
   if (searchTerm) {
-    console.log(searchTerm);
     filteredinstruments = instruments?.filter(instrument =>
       instrument.name
         .toLowerCase()
         .trim()
         .includes(searchTerm?.toLowerCase().trim())
     );
-  } else filteredinstruments = instruments;
+  }
+
+  if (selectedStringNum) {
+    filteredinstruments = filteredinstruments.filter(
+      instrument => instrument.stringNum === selectedStringNum
+    );
+  }
+
+  if (category !== 'todas') {
+    filteredinstruments = filteredinstruments.filter(
+      instrument => instrument.category === category
+    );
+  }
 
   return (
     <>
@@ -33,8 +49,18 @@ export const ShopContainer = () => {
           Instrumentos de Cordas
         </h2>
       </div>
-      <section className="max-container padding-y padding-x">
-        <Search setSearchTerm={setSearchTerm} />
+      <section
+        id="shop"
+        className="max-container padding-y padding-x min-h-[80vh]"
+      >
+        <div className=" flex flex-col gap-6 flex-wrap lg:flex-row md:justify-between border-b border-b-secundary/10 mb-12 md:pb-8">
+          <Search setSearchTerm={setSearchTerm} />
+          <Filter
+            currentStringNum={selectedStringNum}
+            currentCateg={category}
+          />
+        </div>
+        {searchTerm && <p>Pesquisando por {searchTerm}</p>}
         <ShopList>
           {filteredinstruments.length ? (
             filteredinstruments.map(instrument => (
