@@ -1,18 +1,18 @@
 import { type Instrument } from './types';
 
-import guitarFenderStratocasterHSS from './assets/guitars/guitarra-Fender-Stratocaster-Player-II-HSS.jpg';
-import guitarFenderStratocaster from './assets/guitars/guitarra-fender-stratocaster.jpg';
-import guitarPRSSENF3Maple from './assets/guitars/guitarra-PRS-SE-NF3-Maple.jpg';
-import guitarTagimaJazzMaster from './assets/guitars/guitarra-Tagima-Jazz-Master-TW-60.jpg';
-import guitarTagimaWoodstock from './assets/guitars/guitarra-tagima-Woodstock-TW-55.jpg';
-import guitarFenderJazzmaster from './assets/guitars/guitarra-Fender-Jazzmaster-Player-II.jpg';
+import guitarFenderStratocasterHSS from './assets/guitars/guitarra-Fender-Stratocaster-Player-II-HSS.webp';
+import guitarFenderStratocaster from './assets/guitars/guitarra-fender-stratocaster.webp';
+import guitarPRSSENF3Maple from './assets/guitars/guitarra-PRS-SE-NF3-Maple.webp';
+import guitarTagimaJazzMaster from './assets/guitars/guitarra-Tagima-Jazz-Master-TW-60.webp';
+import guitarTagimaWoodstock from './assets/guitars/guitarra-tagima-Woodstock-TW-55.webp';
+import guitarFenderJazzmaster from './assets/guitars/guitarra-Fender-Jazzmaster-Player-II.webp';
 
-import doubleBassSquierJazzBassVAffinity from './assets/double-bass/contrabaixo-Squier-Jazz-Bass-V-Affinity.jpg';
+import doubleBassSquierJazzBassVAffinity from './assets/double-bass/contrabaixo-Squier-Jazz-Bass-V-Affinity.webp';
 import doubleBassSquierPrecisionBassDebut from './assets/double-bass/Contrabaixo-Squier-Precision-Bass-Debut.webp';
 import doubleBassSquierYamahaBB234 from './assets/double-bass/Contrabaixo-Yamaha-BB234.webp';
 import doubleBassSpector5CordasLegend from './assets/double-bass/Contrabaixo-Spector 5-Cordas-Legend-LG5S.webp';
 
-import acousticGuitarGEWAClassicNylonStudent from './assets/acousticGuitars/violão-GEWA-Clássico-Acústico-Nylon-Student.jpg';
+import acousticGuitarGEWAClassicNylonStudent from './assets/acousticGuitars/violão-GEWA-Clássico-Acústico-Nylon-Student.webp';
 import acousticGuitarRoziniNylonJoao from './assets/acousticGuitars/violão-Rozini-Acústico-Nylon-João-Violão.webp';
 import acousticGuitarSigmaClassicNylonCM2 from './assets/acousticGuitars/Violão-Sigma-Clássico-Nylon-CM-2-Tampo-de-Cedro-Macico.webp';
 import acousticGuitarNylonYamahaC80II from './assets/acousticGuitars/Violão-Clássico-Nylon-Yamaha-C80II-Spruce-Natural-Gloss.webp';

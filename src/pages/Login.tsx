@@ -3,7 +3,7 @@ import { BasicHeader } from '../components/header/BasicHeader.tsx';
 import { Button } from '../components/ui/Button.tsx';
 import { Input } from '../components/ui/Input.tsx';
 
-import loginImg from '../assets/rock-in.jpg';
+import loginImg from '../assets/rock-in.webp';
 
 export const Login = () => {
   return (

@@ -1,7 +1,7 @@
 import { Footer } from '../components/Footer.tsx';
 import { BasicHeader } from '../components/header/BasicHeader.tsx';
 
-import silverhand from '../assets/Johnny-Silverhand-playing-guitar.jpg';
+import silverhand from '../assets/Johnny-Silverhand-playing-guitar.webp';
 import { Link } from 'react-router';
 
 export const Error = () => {
