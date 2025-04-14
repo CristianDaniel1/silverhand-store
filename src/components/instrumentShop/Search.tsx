@@ -49,7 +49,7 @@ export const Search = ({ setSearchTerm }: SearchProps) => {
             className="w-full block bg-transparent px-4 py-2 border border-secundary/20 focus-within:outline focus-within:outline-gray-200"
             onChange={handleChange}
           />
-          <button className="border duration-200 px-4 py-2 text-primary border-primary hover:bg-primary hover:text-secundary hover:border-transparent active:text-primary active:bg-white active:border-primary">
+          <button className="border-2 duration-200 px-4 py-2 text-primary border-primary hover:bg-primary hover:text-secundary hover:border-transparent active:text-primary active:bg-white active:border-primary">
             <MagnifyingGlassIcon />
           </button>
         </div>

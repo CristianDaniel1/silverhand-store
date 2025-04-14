@@ -23,6 +23,7 @@ export const ShopItem = ({ id, name, price, image, ...props }: Instrument) => {
           <img
             src={image}
             alt={name}
+            loading="lazy"
             className="object-cover aspect-square img-instrument"
           />
         </div>

@@ -2,7 +2,7 @@ import { Link } from 'react-router';
 import { BasicHeader } from '../components/header/BasicHeader.tsx';
 import { Button } from '../components/ui/Button.tsx';
 import { Input } from '../components/ui/Input.tsx';
-import signUpImg from '../assets/rock-concert.jpg';
+import signUpImg from '../assets/rock-concert.webp';
 
 export const SignUp = () => {
   return (

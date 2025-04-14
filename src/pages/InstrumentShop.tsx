@@ -1,4 +1,6 @@
 import samuraiGuitar from '../assets/silverhand-guitar.jpg';
+import guitarView from '../assets/playing-guitar-2.webp';
+import guitarView2 from '../assets/other-img.webp';
 import { Header } from '../components/header/Header.tsx';
 import { ImageSlider } from '../components/ImageSlider.tsx';
 import { ShopContainer } from '../components/instrumentShop/ShopContainer.tsx';
@@ -10,30 +12,46 @@ export const InstrumentShop = () => {
       <main className="relative overflow-x-clip">
         <div className="min-h-screen">
           <ImageSlider />
-          <section className="padding-y padding-x max-container">
-            <div className="grid grid-cols-2">
-              <div className="py-4 pr-6">
-                <h2 className="text-3xl leading-tight xl:text-[3rem] py-4 font-merry text-balance font-light underline-visual relative">
-                  Silver<span className="text-primary">Hand</span>
-                </h2>
-                <h3 className="text-3xl leading-tight xl:text-[3rem] py-3">
-                  Guitarra Samurai
-                </h3>
-                <div className="text-primary font-semibold text-xl py-3">
-                  Em Breve
-                </div>
-                <p className="text-balance">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
-                  maiores doloribus alias ipsam ratione reiciendis officia
-                  dolor, quas debitis. Hic quos atque ab dolor eos repudiandae
-                  nisi recusandae eum. Quas.
-                </p>
+          <section className="padding-y max-container px-0 sm:padding-x">
+            <h2 className="translate-x-3 sm:translate-x-0 text-3xl leading-tight xl:text-[3rem] pb-5 font-merry text-balance font-light underline-visual relative">
+              Silver<span className="text-primary">Hand</span> Style
+            </h2>
+            <div className="grid grid-cols-3 gap-2 md:gap-3 lg:gap-6 lg:pt-6">
+              <div className="overflow-clip aspect-square">
+                <a href="#shop">
+                  <img
+                    src={samuraiGuitar}
+                    alt="Guitarra Samurai"
+                    loading="lazy"
+                    width={395}
+                    height={395}
+                    className="w-full h-full object-cover brightness-75 hover:brightness-100 duration-300 aspect-square"
+                  />
+                </a>
               </div>
-              <div>
-                <img src={samuraiGuitar} alt="Guitarra Samurai" />
+              <div className="overflow-clip aspect-square">
+                <a href="#shop">
+                  <img
+                    src={guitarView}
+                    loading="lazy"
+                    alt="Guitarra de ilustração"
+                    className="w-full h-full object-cover brightness-75 hover:brightness-100 duration-300 aspect-square"
+                  />
+                </a>
+              </div>
+              <div className="overflow-clip aspect-square">
+                <a href="#shop">
+                  <img
+                    src={guitarView2}
+                    loading="lazy"
+                    alt="Guitarra de ilustração"
+                    className="w-full h-full object-cover brightness-75 hover:brightness-100 duration-300 aspect-square"
+                  />
+                </a>
               </div>
             </div>
           </section>
+
           <ShopContainer />
         </div>
       </main>

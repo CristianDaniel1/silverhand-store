@@ -1,7 +1,7 @@
 import { ShopList } from './ShopList.tsx';
 import { ShopItem } from './ShopItem.tsx';
 import { instruments } from '../../data.ts';
-import img from '../../assets/cool-guitar.jpg';
+import img from '../../assets/cool-guitar.webp';
 import { Search } from './Search.tsx';
 import { useState } from 'react';
 import { Filter } from './Filter.tsx';
@@ -39,10 +39,11 @@ export const ShopContainer = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center flex-wrap gap-6 bg-secundary h-52 sm:h-60 relative">
+      <div className="flex justify-between items-center flex-wrap gap-6 bg-secundary h-28 sm:h-40 md:h-60 relative">
         <img
           src={img}
-          alt="Silverhand Samurai"
+          loading="lazy"
+          alt="guitarra legal"
           className="object-cover h-full w-full opacity-40"
         />
         <h2 className="padding-y font-merry font-light text-2xl sm:text-3xl xl:text-4xl text-center w-full text-white absolute">
