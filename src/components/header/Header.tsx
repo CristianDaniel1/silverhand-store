@@ -20,7 +20,7 @@ export const Header = () => {
   return (
     <header className="overflow-x-clip fixed w-full z-50 bg-secundary">
       <div className="flex justify-between gap-4 relative font-semibold tracking-wide items-center h-[65px] lg:h-24 mx-auto my-0 px-4 md:px-5 lg:px-10 max-container">
-        <Link to="/" className="flex items-center gap-2 h-full pt-[4px]">
+        <a href="#" className="flex items-center gap-2 h-full pt-[4px]">
           <div className="h-full aspect-video">
             <img
               src={logo}
@@ -30,7 +30,7 @@ export const Header = () => {
               className="object-contain h-full"
             />
           </div>
-        </Link>
+        </a>
         <div className="hidden sm:block text-white text-2xl font-merry font-light">
           Let's <span className="text-primary">Rock!</span>
         </div>

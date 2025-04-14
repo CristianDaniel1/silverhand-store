@@ -12,8 +12,10 @@ export const Navigation = ({
   onToggleBar,
 }: NavigationProps) => {
   const setCategory = useFilterStore(state => state.setCategory);
+  const clearFilters = useFilterStore(state => state.clearFilters);
 
   function handleCloseBar(categ: string) {
+    clearFilters();
     setCategory(categ);
     if (isVisible) onCloseBar(false);
   }

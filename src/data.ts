@@ -4,10 +4,18 @@ import guitarFenderStratocasterHSS from './assets/guitars/guitarra-Fender-Strato
 import guitarFenderStratocaster from './assets/guitars/guitarra-fender-stratocaster.jpg';
 import guitarPRSSENF3Maple from './assets/guitars/guitarra-PRS-SE-NF3-Maple.jpg';
 import guitarTagimaJazzMaster from './assets/guitars/guitarra-Tagima-Jazz-Master-TW-60.jpg';
+import guitarTagimaWoodstock from './assets/guitars/guitarra-tagima-Woodstock-TW-55.jpg';
+import guitarFenderJazzmaster from './assets/guitars/guitarra-Fender-Jazzmaster-Player-II.jpg';
 
 import doubleBassSquierJazzBassVAffinity from './assets/double-bass/contrabaixo-Squier-Jazz-Bass-V-Affinity.jpg';
+import doubleBassSquierPrecisionBassDebut from './assets/double-bass/Contrabaixo-Squier-Precision-Bass-Debut.webp';
+import doubleBassSquierYamahaBB234 from './assets/double-bass/Contrabaixo-Yamaha-BB234.webp';
+import doubleBassSpector5CordasLegend from './assets/double-bass/Contrabaixo-Spector 5-Cordas-Legend-LG5S.webp';
 
 import acousticGuitarGEWAClassicNylonStudent from './assets/acousticGuitars/violão-GEWA-Clássico-Acústico-Nylon-Student.jpg';
+import acousticGuitarRoziniNylonJoao from './assets/acousticGuitars/violão-Rozini-Acústico-Nylon-João-Violão.webp';
+import acousticGuitarSigmaClassicNylonCM2 from './assets/acousticGuitars/Violão-Sigma-Clássico-Nylon-CM-2-Tampo-de-Cedro-Macico.webp';
+import acousticGuitarNylonYamahaC80II from './assets/acousticGuitars/Violão-Clássico-Nylon-Yamaha-C80II-Spruce-Natural-Gloss.webp';
 
 import img1 from './assets/playing-guitar.webp';
 import img2 from './assets/playing-guitar-2.webp';
@@ -68,6 +76,78 @@ export const instruments: Instrument[] = [
     quant: 50,
     image: acousticGuitarGEWAClassicNylonStudent,
     category: 'violão',
+  },
+  {
+    id: 'Guitarra Tagima Woodstock TW-55 - Preta',
+    name: 'Guitarra Tagima Woodstock TW-55 - Preta',
+    price: 1340.1,
+    stringNum: 6,
+    quant: 22,
+    image: guitarTagimaWoodstock,
+    category: 'guitarra',
+  },
+  {
+    id: 'Guitarra Fender Jazzmaster Player II - 3-Color Sunburst',
+    name: 'Guitarra Fender Jazzmaster Player II - 3-Color Sunburst',
+    price: 9891.0,
+    stringNum: 6,
+    quant: 15,
+    image: guitarFenderJazzmaster,
+    category: 'guitarra',
+  },
+  {
+    id: 'Violão Rozini Acústico Nylon João Violão RX209ACFCD',
+    name: 'Violão Rozini Acústico Nylon João Violão RX209ACFCD',
+    price: 1259.1,
+    stringNum: 6,
+    quant: 34,
+    image: acousticGuitarRoziniNylonJoao,
+    category: 'violão',
+  },
+  {
+    id: 'Violão Sigma Clássico Nylon CM-2 Tampo de Cedro Maciço',
+    name: 'Violão Sigma Clássico Nylon CM-2 Tampo de Cedro Maciço',
+    price: 2861.1,
+    stringNum: 6,
+    quant: 24,
+    image: acousticGuitarSigmaClassicNylonCM2,
+    category: 'violão',
+  },
+  {
+    id: 'Violão Clássico Nylon Yamaha C80 II Spruce Natural Gloss',
+    name: 'Violão Clássico Nylon Yamaha C80 II Spruce Natural Gloss',
+    price: 1403.1,
+    stringNum: 6,
+    quant: 24,
+    image: acousticGuitarNylonYamahaC80II,
+    category: 'violão',
+  },
+  {
+    id: 'Contrabaixo Squier Precision Bass Debut - Dakota Red',
+    name: 'Contrabaixo Squier Precision Bass Debut - Dakota Red',
+    price: 1799.1,
+    stringNum: 4,
+    quant: 27,
+    image: doubleBassSquierPrecisionBassDebut,
+    category: 'contrabaixo',
+  },
+  {
+    id: 'Contrabaixo Yamaha BB234 - Raspberry Red',
+    name: 'Contrabaixo Yamaha BB234 - Raspberry Red',
+    price: 3411.0,
+    stringNum: 4,
+    quant: 20,
+    image: doubleBassSquierYamahaBB234,
+    category: 'contrabaixo',
+  },
+  {
+    id: 'Contrabaixo Spector 5 Cordas Legend LG5S - Black Cherry',
+    name: 'Contrabaixo Spector 5 Cordas Legend LG5S - Black Cherry',
+    price: 3411.0,
+    stringNum: 5,
+    quant: 22,
+    image: doubleBassSpector5CordasLegend,
+    category: 'contrabaixo',
   },
 ];
 
