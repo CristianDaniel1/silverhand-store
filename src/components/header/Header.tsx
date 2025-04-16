@@ -8,6 +8,8 @@ import { HamburgerIcon } from '../icons/HamburgerIcon.tsx';
 import { CartButton } from '../cart/CartButton.tsx';
 import { useCartStore } from '../../store/cartStore.ts';
 
+const audio = new Audio('./money-for-nothing.mp3');
+
 export const Header = () => {
   const isOpen = useCartStore(state => state.isOpen);
 
@@ -15,6 +17,10 @@ export const Header = () => {
 
   function handleToggleBar() {
     setIsVisible(prevIsVisible => !prevIsVisible);
+  }
+
+  function handleAudio() {
+    audio.play();
   }
 
   return (
@@ -31,7 +37,10 @@ export const Header = () => {
             />
           </div>
         </a>
-        <div className="text-white hidden sm:block text-xl sm:text-2xl font-merry font-light">
+        <div
+          className="text-white hidden sm:block text-xl sm:text-2xl font-merry font-light"
+          onClick={handleAudio}
+        >
           Let's <span className="text-primary">Rock!</span>
         </div>
         <div className="flex items-center justify-center gap-2">
