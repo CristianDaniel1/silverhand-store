@@ -31,20 +31,22 @@ export const Header = () => {
             />
           </div>
         </a>
-        <div className="hidden sm:block text-white text-2xl font-merry font-light">
+        <div className="text-white hidden sm:block text-xl sm:text-2xl font-merry font-light">
           Let's <span className="text-primary">Rock!</span>
         </div>
-        <div className="ml-auto lg:ml-0 flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center gap-2">
           <CartButton isVisible={isVisible} onCloseBar={handleToggleBar} />
           <Link
             to="/login"
+            aria-label="ir para o login"
             className="flex sm:gap-2 sm:items-center text-slate-100 hover:text-primary duration-200 px-3 py-3"
           >
             <UserIcon />
-            <span className="hidden md:inline-block">Entrar</span>
+            <span className="hidden lg:inline-block">Entrar</span>
           </Link>
           <button
             onClick={handleToggleBar}
+            aria-label="abrir e fechar menu"
             className="z-50 flex items-center lg:hidden text-slate-100 duration-200 hover:text-primary"
           >
             {isVisible ? <CloseIcon /> : <HamburgerIcon />}

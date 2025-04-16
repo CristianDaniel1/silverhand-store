@@ -13,7 +13,7 @@ export const Footer = () => {
             className="object-contain"
           />
         </div>
-        <p className="text-center order-1">
+        <p className="text-center text-balance order-1">
           &copy; 2024 SilverHand. Desenvolvido por{' '}
           <span className="font-medium">Cristian Daniel</span>
         </p>

@@ -1,4 +1,4 @@
-import samuraiGuitar from '../assets/silverhand-guitar.jpg';
+import samuraiGuitar from '../assets/silverhand-guitar.webp';
 import guitarView from '../assets/playing-guitar-2.webp';
 import guitarView2 from '../assets/other-img.webp';
 import { Header } from '../components/header/Header.tsx';

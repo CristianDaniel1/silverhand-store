@@ -24,10 +24,11 @@ export const CartButton = ({ isVisible, onCloseBar }: CartButtonProps) => {
   return (
     <button
       className="flex gap-2 items-center text-slate-100 hover:text-primary duration-200 relative"
+      aria-label="abrir carrinho de compras"
       onClick={handleToggleCart}
     >
       <CartIcon />
-      <span className="hidden md:block tracking-wider font-semibold">
+      <span className="hidden lg:block tracking-wider font-semibold">
         Carrinho
       </span>
       {totalItems ? (

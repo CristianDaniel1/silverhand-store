@@ -39,14 +39,14 @@ export const CartItem = ({
       id={id}
       className="grid grid-cols-3 rounded-lg overflow-clip border-b border-b-secundary/20 pb-6"
     >
-      <div className="h-full row-span-2">
+      <div className="h-full row-span-2 flex items-center justify-center">
         <img
           src={image}
           alt={name}
-          className="aspect-square object-cover h-full"
+          className="aspect-square object-cover w-full"
         />
       </div>
-      <h3 className="font-merry font-light tracking-wide mb-3 pt-6 text-sm sm:text-base">
+      <h3 className="font-merry font-light tracking-wide mb-3  pt-4 sm:pt-6 text-sm sm:text-base">
         {name}
       </h3>
       <div className="text-primary-light font-semibold pt-6 pr-3 sm:pr-6 ml-auto text-sm sm:text-base">

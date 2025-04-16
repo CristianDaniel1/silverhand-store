@@ -61,7 +61,11 @@ export const ShopContainer = () => {
             currentCateg={category}
           />
         </div>
-        {searchTerm && <p>Pesquisando por {searchTerm}</p>}
+        {searchTerm && (
+          <p className="pb-4 text-balance">
+            Pesquisando por <span className="font-medium">{searchTerm}</span>
+          </p>
+        )}
         <ShopList>
           {filteredinstruments.length ? (
             filteredinstruments.map(instrument => (

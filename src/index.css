@@ -28,7 +28,7 @@
   }
 
   .instrument:hover .img-instrument {
-    @apply scale-125 -translate-y-12 opacity-75;
+    @apply sm:scale-125 sm:-translate-y-12 sm:opacity-75;
   }
 
   .instrument-btn-2 {

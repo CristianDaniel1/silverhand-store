@@ -34,12 +34,14 @@ export const ImageSlider = () => {
       <div className="absolute w-full h-full flex justify-between items-end pb-6 sm:pb-0 sm:items-center sm:px-5">
         <button
           className="p-3 rounded-md bg-transparent text-white hover:text-primary active:text-white duration-200"
+          aria-label="passar para imagem da esquerda"
           onClick={handlePrevImage}
         >
           <CaretLeftIcon />
         </button>
         <button
           className="p-3 rounded-md bg-transparent text-white hover:text-primary active:text-white duration-200"
+          aria-label="passar para a próxima imagem"
           onClick={handleNextImage}
         >
           <CaretRightIcon />

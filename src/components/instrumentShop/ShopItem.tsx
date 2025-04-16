@@ -40,10 +40,10 @@ export const ShopItem = ({ id, name, price, image, ...props }: Instrument) => {
         </div>
       </Link>
       <Button
-        className="absolute left-3 right-3 bottom-4 flex items-center justify-center gap-2"
+        className="absolute left-3 right-3 bottom-4 flex items-center justify-center gap-2 text-sm xs:text-base"
         onClick={handleAddToCart}
       >
-        <div className="hidden xs:inline-block">
+        <div className="inline-block">
           <CartIcon />
         </div>
         Adicionar

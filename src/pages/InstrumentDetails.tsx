@@ -44,7 +44,7 @@ export const InstrumentDetails = () => {
                 <h3 className="text-secundary font-medium tracking-wider pb-4">
                   Detalhes:
                 </h3>
-                <div className="pb-6 grid grid-cols-2 gap-4">
+                <div className="pb-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="px-4 py-3 border border-secundary/20">
                     Número de Cordas:{' '}
                     <span className="text-primary font-medium">
