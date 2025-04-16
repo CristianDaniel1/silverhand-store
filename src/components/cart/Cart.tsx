@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useCartStore } from '../../store/cartStore.ts';
 import { currencyFormatter } from '../../utils/formatting.ts';
 import { CloseIcon } from '../icons/CloseIcon.tsx';
@@ -5,16 +6,35 @@ import { TrashIcon } from '../icons/TrashIcon.tsx';
 import { Button } from '../ui/Button.tsx';
 import { CartItem } from './CartItem.tsx';
 import { CartList } from './CartList.tsx';
+import { Message } from '../ui/Message.tsx';
 
 export const Cart = () => {
+  const [buy, setBuy] = useState(false);
+
   const isOpen = useCartStore(state => state.isOpen);
   const hideCart = useCartStore(state => state.hideCart);
   const clearCart = useCartStore(state => state.clearCart);
   const cartItems = useCartStore(state => state.cartItems);
 
+  function handleBuyClick() {
+    setBuy(true);
+  }
+
   function handleHideCart() {
     hideCart();
   }
+
+  useEffect(() => {
+    if (buy) {
+      const timer = setTimeout(() => {
+        setBuy(false);
+      }, 1500);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [buy]);
 
   const totalPrice = cartItems.reduce(
     (totalPrice, item) => totalPrice + item.quantInCart * item.price,
@@ -52,7 +72,7 @@ export const Cart = () => {
                 <CartItem key={item.id} {...item} />
               ))}
             </CartList>
-            <div className="">
+            <div className="relative">
               <div className="flex justify-between items-center pb-4">
                 <p className="font-medium tracking-wide text-lg">
                   Total a pagar:{' '}
@@ -67,9 +87,10 @@ export const Cart = () => {
                   <TrashIcon /> Excluir
                 </button>
               </div>
-              <Button bgColor className="block w-full">
+              <Button bgColor className="block w-full" onClick={handleBuyClick}>
                 Realizar Pedido!
               </Button>
+              {buy && <Message message="É necessário estar logado!" />}
             </div>
           </>
         ) : (

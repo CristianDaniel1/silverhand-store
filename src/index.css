@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .color {
-  color: #111111;
+  color: #131313;
 }
 
 @layer base {
@@ -85,6 +85,19 @@
 
   @starting-style {
     transform: translateX(100%);
+  }
+}
+
+.message {
+  transition-duration: 0.2s;
+  transition-behavior: allow-discrete;
+  transform: translate(-50%, calc(-100% - 0.5rem));
+  opacity: 1;
+
+  @starting-style {
+    transform: translate(-50%, 0);
+    left: 50%;
+    opacity: 0;
   }
 }
 

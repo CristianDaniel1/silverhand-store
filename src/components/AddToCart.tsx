@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import { Button } from './ui/Button.tsx';
+import { Message } from './ui/Message.tsx';
 
 interface AddToCartProps {
   className?: string;
@@ -6,9 +8,23 @@ interface AddToCartProps {
 }
 
 export const AddToCart = ({ className, onAddToCart }: AddToCartProps) => {
+  const [isAdded, setIsAdded] = useState(false);
   function handleAddToCart() {
     onAddToCart();
+    setIsAdded(true);
   }
+
+  useEffect(() => {
+    if (isAdded) {
+      const timer = setTimeout(() => {
+        setIsAdded(false);
+      }, 1500);
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  }, [isAdded]);
 
   return (
     <div className="relative">
@@ -19,6 +35,7 @@ export const AddToCart = ({ className, onAddToCart }: AddToCartProps) => {
       >
         Adicionar no carrinho
       </Button>
+      {isAdded && <Message message="Adicionado!" />}
     </div>
   );
 };
